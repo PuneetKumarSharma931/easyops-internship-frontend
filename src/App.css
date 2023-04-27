@@ -1,38 +1,175 @@
-.App {
+.mainContainer {
+
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.formContainer {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 30%;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: baseline;
+  margin-top: 6rem;
+
 }
 
-.App-link {
-  color: #61dafb;
+.nameContainer {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputField {
+
+  width: 98%;
+  height: 2rem;
+  outline: none;
+  border: 1.5px solid black;
+  font-size: 17px;
+  padding: 0.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.inputFieldName {
+
+  width: 47%;
+  height: 2rem;
+  outline: none;
+  border: 1.5px solid black;
+  font-size: 17px;
+  padding: 0.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.labelField {
+
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.saveBtn {
+
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 17px;
+  background-color: rgb(31, 181, 31);
+  border: 1.5px solid black;
+  cursor: pointer;
+}
+
+.dataContainer {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.searchContainer {
+  
+  margin-top: 2.5rem;
+  width: 82%;
+  display: flex;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  flex-direction: row;
+  justify-content: baseline;
+  align-items: center;
+  border: 1.5px solid black;
+  border-radius: 55px;
+}
+
+.searchField {
+
+  width: 100%;
+  height: 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  padding: 0.2rem;
+  padding-left: 0.6rem;
+  border-radius: 55px;
+}
+
+#searchButton {
+
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+
+  background-color: rgb(241, 77, 77);
+  cursor: pointer;
+}
+
+table { 
+	width: 850px; 
+  margin-top: 2rem;
+	border-collapse: collapse; 
+}
+
+tr:nth-of-type(odd) { 
+	background: #eee; 
+}
+
+th { 
+	background: #3498db; 
+	color: white; 
+	font-weight: bold; 
+}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 18px;
+  text-align: center;
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		content: attr(data-column);
+		color: #000;
+		font-weight: bold;
+	}
+
 }
